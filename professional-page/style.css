@@ -39,8 +39,18 @@ body {
     right: -17.5em;
     transition: 1s;
   }
+  
   .menu ul li {
     border-bottom: 1px solid rgb(54, 18, 90);
+  }
+
+  .menu ul li:first-of-type {
+    border-bottom: none;
+  }
+  .menu ul li:first-of-type a{
+    display: inline-block;
+    padding: 0;
+    margin: 1em;
   }
   .menu ul li a {
     display: block;
@@ -58,14 +68,14 @@ body {
     right: 0em;
     transition: 1s;
   }
-   .menu .close::before {
-    display: block;
+
+  .menu .close::before {
     content: "\f00d";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: red;
     font-size: 1.3em;
-    padding: 1em 0;
+
   }
   .menu .close {
     text-decoration: none;
