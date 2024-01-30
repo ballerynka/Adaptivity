@@ -32,9 +32,12 @@
       <nav class="menu" id="menu">
         <a class="logo" href="#"><img src="images/logo.png" alt="LOGO" /></a>
 
-        <ul>
-          <li><a class="close" href="#"></a>
-          <li><a href="#">Demos</a></li>
+        <ul id="list">
+          <!--<li><a class="close" href="#"></a></li>-->
+          <li>
+            <span id="close"><i class="fa-solid fa-xmark"></i></span
+            ><a href="#">Demos</a>
+          </li>
           <li><a href="#">Resume</a></li>
           <li><a href="#">Feature</a></li>
           <li><a href="#">Portfolio</a></li>
@@ -42,9 +45,36 @@
           <li><a href="#">Blog</a></li>
           <li><a href="#">Pages</a></li>
         </ul>
+
         <a class="chat-btn" href="#">Let's Chat</a>
-        <a class="toggler" href="#menu"><i class="fas fa-bars"></i></a>
+        <a class="toggler" id="toggler" href="#menu"
+          ><i class="fas fa-bars"></i
+        ></a>
       </nav>
+      <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      ></script>
+
+      <script>
+        document
+          .getElementById("toggler")
+          .addEventListener("click", function () {
+            document.getElementById("list").style.display = "block";
+          });
+        document.getElementById("close").addEventListener("click", function () {
+          document.getElementById("list").style.display = "none";
+        });
+        window.addEventListener("resize", function () {
+          if (window.matchMedia("(max-width: 992px)").matches) {
+            document.getElementById("list").style.display = "none";
+          } else {
+            document.getElementById("list").style.display = "block";
+          }
+        });
+      </script>
     </section>
     <header>
       <div class="header-container">

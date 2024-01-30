@@ -30,7 +30,7 @@ body {
     padding: 1em;
   }
   .menu ul {
-    opacity: 0;
+    display: none;
     position: fixed;
     background-color: #1b0234;
     width: 17.5em;
@@ -39,19 +39,18 @@ body {
     right: -17.5em;
     transition: 1s;
   }
-  
   .menu ul li {
     border-bottom: 1px solid rgb(54, 18, 90);
   }
 
-  .menu ul li:first-of-type {
+  /* .menu ul li:first-of-type {
     border-bottom: none;
   }
   .menu ul li:first-of-type a{
     display: inline-block;
     padding: 0;
     margin: 1em;
-  }
+  }*/
   .menu ul li a {
     display: block;
     text-decoration: none;
@@ -69,7 +68,7 @@ body {
     transition: 1s;
   }
 
-  .menu .close::before {
+  /*  .menu .close::before {
     content: "\f00d";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -80,7 +79,14 @@ body {
   .menu .close {
     text-decoration: none;
   }
-
+*/
+  #close {
+    display: inline-block;
+    color: red;
+    margin: 1em;
+    font-size: 1.3em;
+    cursor: grab;
+  }
   .toggler {
     font-size: 1.5em;
     color: var(--white-color);
@@ -886,6 +892,9 @@ body {
     display: inline-block;
     margin: 0 1.1em;
   }
+  .menu ul li span {
+    display: none;
+  }
   .menu ul li a {
     text-decoration: none;
     font-family: "Roboto", sans-serif;
@@ -1555,6 +1564,9 @@ body {
   .menu ul li {
     display: inline-block;
     margin: 0 1.1em;
+  }
+  .menu ul li span {
+    display: none;
   }
   .menu ul li a {
     text-decoration: none;
