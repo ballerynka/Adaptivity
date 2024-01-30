@@ -58,14 +58,17 @@ body {
     right: 0em;
     transition: 1s;
   }
-  .menu ul::before {
+   .menu .close::before {
     display: block;
     content: "\f00d";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     color: red;
     font-size: 1.3em;
-    padding: 1em 0 0 0.7em;
+    padding: 1em 0;
+  }
+  .menu .close {
+    text-decoration: none;
   }
 
   .toggler {
